@@ -81,14 +81,12 @@ public class App {
         boolean conseguiu = false;
 
         for(int i = 0; i <= listaDeCursos.size(); i++){
-            if(nomeCurso != listaDeCursos.get(i).getNomeCurso()){
-                Matricula matricula = new Matricula(numeroMatricula, dataInicio, listaDeCursos.get(i));
-                Aluna aluna = new Aluna(nomeAluna, dataAluna, cpfAluna, semestreAluna, cadastroEstagio, matricula);
+            if(nomeCurso == listaDeCursos.get(i).getNomeCurso()){
                 conseguiu = true;
-            }else{
-                estadoDoVetor = i;
             }
+            estadoDoVetor = i;
         }
+        
         if(conseguiu == false){
             Curso cursoNovo = new Curso(nomeCurso, nomeFaculdade, notaInep);
             listaDeCursos.add(cursoNovo);
