@@ -2,13 +2,13 @@ package dominio;
 
 public class Aluna extends Pessoa {
     private String semestre;
-    private String cadastro;
+    private String cadastroEstagio;
     private Matricula matricula;
 
-    public Aluna(String nome, String dataDeNascimento, String cpf, String semestre, String cadastro, Matricula matricula){
+    public Aluna(String nome, String dataDeNascimento, String cpf, String semestre, String cadastroEstagio, Matricula matricula){
         super(nome, dataDeNascimento, cpf);
         this.semestre = semestre;
-        this.cadastro = cadastro;
+        this.cadastroEstagio = cadastroEstagio;
         this.matricula = matricula;
     }
 
@@ -21,11 +21,11 @@ public class Aluna extends Pessoa {
     }
 
     public String getCadastro() {
-        return cadastro;
+        return cadastroEstagio;
     }
 
-    public void setCadastro(String cadastro) {
-        this.cadastro = cadastro;
+    public void setcadastroEstagio(String cadastroEstagio) {
+        this.cadastroEstagio = cadastroEstagio;
     }
 
     public Matricula getMatricula() {

@@ -25,5 +25,4 @@ public class Mentora extends Pessoa{
     public void setAnosDeExperiencia(int anosDeExperiencia) {
         this.anosDeExperiencia = anosDeExperiencia;
     }
-
 }
