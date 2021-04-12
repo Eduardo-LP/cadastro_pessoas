@@ -78,20 +78,23 @@ public class App {
         double notaInep = scanner.nextDouble();
 
         int estadoDoVetor = 0;
+        boolean conseguiu = false;
 
         for(int i = 0; i <= listaDeCursos.size(); i++){
             if(nomeCurso != listaDeCursos.get(i).getNomeCurso()){
-                estadoDoVetor = i;
-            }else{
                 Matricula matricula = new Matricula(numeroMatricula, dataInicio, listaDeCursos.get(i));
                 Aluna aluna = new Aluna(nomeAluna, dataAluna, cpfAluna, semestreAluna, cadastroEstagio, matricula);
+                conseguiu = true;
+            }else{
+                estadoDoVetor = i;
             }
         }
-        Curso cursoNovo = new Curso(nomeCurso, nomeFaculdade, notaInep);
-        listaDeCursos.add(cursoNovo);
-        Matricula matricula = new Matricula(numeroMatricula, dataInicio, listaDeCursos.get(estadoDoVetor));
-        Aluna aluna = new Aluna(nomeAluna, dataAluna, cpfAluna, semestreAluna, cadastroEstagio, matricula);
-        
+        if(conseguiu == false){
+            Curso cursoNovo = new Curso(nomeCurso, nomeFaculdade, notaInep);
+            listaDeCursos.add(cursoNovo);
+            Matricula matricula = new Matricula(numeroMatricula, dataInicio, listaDeCursos.get(estadoDoVetor));
+            Aluna aluna = new Aluna(nomeAluna, dataAluna, cpfAluna, semestreAluna, cadastroEstagio, matricula);
+        }
     }
         
     private static void limpaTela() {
