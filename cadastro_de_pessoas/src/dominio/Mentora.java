@@ -3,6 +3,7 @@ package dominio;
 public class Mentora extends Pessoa{
     private String empresaQueTrabalha;
     private int anosDeExperiencia;
+    private String tipo = "mentora";
 
     public Mentora(String nome, String dataDeNascimento, String cpf, String empresaQueTrabalha, int anosDeExperiencia){
         super(nome, dataDeNascimento, cpf);
@@ -20,6 +21,10 @@ public class Mentora extends Pessoa{
 
     public int getAnosDeExperiencia() {
         return anosDeExperiencia;
+    }
+
+    public String getTipo() {
+        return tipo;
     }
 
     public void setAnosDeExperiencia(int anosDeExperiencia) {

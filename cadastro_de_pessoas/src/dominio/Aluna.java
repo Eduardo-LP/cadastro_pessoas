@@ -4,6 +4,7 @@ public class Aluna extends Pessoa {
     private String semestre;
     private String cadastroEstagio;
     private Matricula matricula;
+    private String tipo = "aluna";
 
     public Aluna(String nome, String dataDeNascimento, String cpf, String semestre, String cadastroEstagio, Matricula matricula){
         super(nome, dataDeNascimento, cpf);
@@ -30,6 +31,10 @@ public class Aluna extends Pessoa {
 
     public Matricula getMatricula() {
         return matricula;
+    }
+
+    public String getTipo() {
+        return tipo;
     }
 
     public void setMatricula(Matricula matricula) {
